@@ -24,6 +24,14 @@
                             v-bind:initialItem="item"
                             v-on:removeFromCart="removeFromCart"/>
                     </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td>{{ cartTotalLength }}</td>
+                            <td>{{ cartTotalPrice.toFixed(2)}}</td>
+                        </tr>
+                    </tfoot>            
                 </table>
 
                 <p v-else>No products in your cart yet...</p>
@@ -37,7 +45,7 @@
 
                 <hr>
 
-                <router-link to="cart/checkout" class="button is-dark">Proceed to checkout</router-link>
+                <router-link to="/cart/checkout" class="button is-dark" v-if="cartTotalLength">Proceed to checkout</router-link>
 
             </div>
         </div>

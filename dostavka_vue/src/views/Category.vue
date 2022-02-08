@@ -52,7 +52,7 @@ export default {
                 .then(response => {
                     this.category = response.data
 
-                    document.title = this.category.name + ' | LuckyNatasha'
+                    document.title = this.category.name + ' | Taho &#5794; &#5800;'
                 })
                 .catch(error => {
                     console.log(error)

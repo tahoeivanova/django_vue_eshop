@@ -49,7 +49,7 @@ export default {
         }
     },
     mounted() {
-        document.title = 'Log In | Lucky Natasha'
+        document.title = 'Log In | Taho'
     },
     methods: {
         async submitForm() {

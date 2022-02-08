@@ -1,8 +1,8 @@
 <template>
   <div id="wrapper">
-    <nav class="navbar is-dark">
+    <nav class="navbar is-light">
         <div class="navbar-brand">
-            <router-link to="/" class="navbar-item"><strong>LuckyNatasha</strong></router-link>
+            <router-link to="/" class="navbar-item"><strong>Taho &#5794; &#5800;</strong></router-link>
 
             <a class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu" @click="showMobileMenu=!showMobileMenu">
                 <span aria-hidden="true"></span>
@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="control">
-                      <button class="button is-success">
+                      <button class="button is-info">
                         <span class="icon">
                           <i class="fas fa-search"></i>
                         </span>
@@ -32,13 +32,18 @@
               </div>
             </div>
             <div class="navbar-end">
-               <router-link to="/summer" class="navbar-item">Summer</router-link>
-               <router-link to="/winter" class="navbar-item">Winter</router-link>
+               <router-link to="/wsy" class="navbar-item">Wsy</router-link>
+               <router-link to="/psy" class="navbar-item">Psy</router-link>
 
                <div class="navbar-item">
                    <div class="buttons">
+                     <template v-if="$store.state.isAuthenticated">
+                        <router-link to="/my-account" class="button is-light">My account</router-link>
+                     </template>
+                     <template v-else>
                       <router-link to="/log-in" class="button is-light">Log in</router-link>
-                      <router-link to="/cart" class="button is-success">
+                     </template>                     
+                      <router-link to="/cart" class="button is-info">
                         <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                         <span>Cart ({{ cartTotalLength }})</span>
                       </router-link>
@@ -71,7 +76,7 @@ export default {
       showMobileMenu: false,
       cart: {
         items: []
-      }
+      },
     }
   },
   beforeCreate() {

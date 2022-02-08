@@ -1,19 +1,20 @@
 <template>
   <div class="home">
-    <section class="hero is-medium is-dark mb-6">
-      <div class="hero-body has-text-centered">
+    <section class="hero is-dark is-medium mb-6">
+      <div class="hero-body has-text-centered mt-1">
         <p class="title mb-6">
-          Welcome to NatashaShop
-        </p>
-        <p class="subtitle">
-          The best clothes in the world
-        </p>
+                Welcome to Taho &#5794; &#5800;
+            </p>
+            <p class="subtitle">
+                The best store online
+            </p>
+
       </div>
     </section>
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="is-size-2 has-text-centered">Latest products</h2>
+        <h2 class="is-size-2 has-text-centered">All you need is...</h2>
       </div>
 
       <ProductBox
@@ -43,7 +44,7 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
-    document.title = 'Home | LuckyNatasha'
+    document.title = 'Home | Taho'
 
   },
   methods: {
